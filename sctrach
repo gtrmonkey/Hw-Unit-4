@@ -1,0 +1,125 @@
+
+  $('#print').on('click', function(){
+    $('#content').empty();
+    employeeList.forEach(e => {
+      render(e.name, e.officeNum, e.phoneNum); 
+  });
+  });
+
+
+function printEmployeeInfo(employeeList) {
+
+    for (let i = 0; i < employeeList.length; i++) {
+      render(employeeList[i].name);
+      render(employeeList[i].officeNum);
+      render(employeeList[i].phoneNum);
+    }
+
+
+//works!
+  
+  function containsEmplpyee(employeeList) {
+      const employeeString = prompt('Give me the start of an employee name?')
+      for (let i = 0; i < employeeList.length; i++) {
+        let currentEmployee = employeeList[i].name;
+        let didIFindIt = currentEmployee.indexOf(employeeString);
+        if (didIFindIt > -1) {
+          render(currentEmployee)
+        }
+      }
+    }
+    //works!
+    function lookupEmplpyee(employeeList) {
+      const employeeName = prompt('Give me an employee name?')
+      for (let i = 0; i < employeeList.length; i++) {
+        if (employeeName === employeeList[i].name){
+        
+        render(employeeList[i].name)
+        render(employeeList[i].officeNum)
+        render(employeeList[i].phoneNum)
+        }
+    
+
+
+
+// works!
+    function verifyEmplpyee(employeeList) {
+      const employeeName = prompt('Give me an employee name?')
+      for (let i = 0; i < employeeList.length; i++) {
+        console.log(employeeList[i].name)
+        console.log(i)
+        if (employeeList[i].name === employeeName) {
+          render('true')
+        } else {
+          render('false')
+        }
+      }
+    }
+    
+    
+    //works!
+    function deleteEmplpyee(employeeList) {
+      const employeeName = prompt('Give me an employee name?')
+      for (let i = 0; i < employeeList.length; i++) {
+        if (employeeList[i].name === employeeName) {
+    
+          employeeList.splice(i, 1);
+    
+          for (let i = 0; i < employeeList.length; i++) {
+    
+            render(employeeList[i].name)
+            render(employeeList[i].officeNum)
+            render(employeeList[i].phoneNum)
+          }
+        }
+      }
+    }
+    
+    //works!
+    function addEmplpyee(employeeList) {
+      const employeeName = prompt('Give me an employee name?');
+      const employeeOffice = prompt('Give me their office number');
+      const employeeTelephone = prompt('Give me their telephone number');
+    
+      var newEmployee = {
+        name: employeeName,
+        officeNum: employeeOffice,
+        phoneNum: employeeTelephone
+      }
+    
+      employeeList.push(newEmployee);
+    
+      for (let j = 0; j < employeeList.length; j++) {
+        render(employeeList[j].name)
+        render(employeeList[j].officeNum)
+        render(employeeList[j].phoneNum)
+      }
+    
+    }
+    
+    //works!
+    function updateEmplpyee(employeeList) {
+      const employeeName = prompt('Give me an employee name?')
+      const employeeField = prompt('Give me a field to update.')
+      const employeeValue = prompt('What would you like the new field to say?')
+      
+        if (employeeField === 'office') {
+           for (let i = 0; i < employeeList.length; i++) {
+              if (employeeName === employeeList[i].name) {
+              employeeList[i].officeNum = employeeValue
+              render(employeeList[i].name)
+              render(employeeList[i].officeNum)
+              render(employeeList[i].phoneNum)
+              }
+    
+            }
+            } else if(employeeField === "phone"){
+              for (let i = 0; i < employeeList.length; i++) {
+                if (employeeName === employeeList[i].name) {
+                employeeList[i].phoneNum = employeeValue
+              render(employeeList[i].name)
+              render(employeeList[i].officeNum)
+              render(employeeList[i].phoneNum)
+          
+    
+        }}}}

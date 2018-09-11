@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="header">
+    <h1> Employee Manager</h1>
+  </section>
+
+  <div class="sidenav">
+    <a href= "#printForm" id="print">Print</a>
+    <a href="#verForm" id = "verify">Verify</a>
+    <a href="#lookupForm"id = "lookup">Lookup</a>
+    <a href="#containForm"id = "contains">Contains</a>
+    <a href="#updateForm" id = "update">Update</a>
+    <a href="#addForm" id= "add">Add</a>
+    <a href="#deleteForm"id ="delete">Delete</a>
+  </div>
+  <form>
+    
+  </form>
+
+  
+<main>
+    <form id="printForm">
+      <input id="printb" type="submit" value="Print">
+    </form>
+    <form id="verForm">
+      <input id="inputV" type="text"  placeholder="employee name" name="employeeNAme">
+      <input id="sverify" type="submit" value="Verify">
+    </form>
+    <form id="lookupForm">
+        <input id="inputL" type="text"  placeholder="employee name" name="employeeNAme">
+      <input id="slookup" type="submit" value="Lookup">
+    </form>
+    <form id="containForm">
+        <input id="inputC" type="text"  placeholder="employee name" name="employeeNAme">
+      <input id="contain" type="submit" value="Contains Form">
+    </form>
+    <form id="updateForm">
+        <input id="inputUname" type="text"  placeholder="employee name" name="employeeNAme">
+        <input id="inputUnum" type="text"  placeholder="employee number" name="employeeNumber">
+        <input id="inputUp" type="text"  placeholder="employee Phone" name="employeePhone">
+      <input id="supdate" type="submit" value="Update">
+    </form>
+    <form id="addForm">
+        <input id="inputAname" type="text"  placeholder="employee name" name="employeeNAme">
+        <input id="inputAnum" type="text"  placeholder="employee Number" name="employeeNumber">
+        <input id="inputAp" type="text"  placeholder="employee Phone" name="employeePhone">
+      <input id="sadd" type="submit" value="ADD">
+    </form>
+    <form id="deleteForm">
+        <input id="inputDname" type="text"  placeholder="employee name" name="employeeNAme">
+      <input id="delete" type="submit" value="Delete">
+    </form>
+
+   <div id="content"></div>
+   </main>
+  <script src="render.js"></script>
+  <script src="dom.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
